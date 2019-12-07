@@ -112,6 +112,7 @@ class CodeHilite:
                         lexer = get_lexer_by_name('text')
                 except ValueError:
                     lexer = get_lexer_by_name('text')
+            self.css_class += f' {lexer.name.lower()}'
             formatter = get_formatter_by_name('html',
                                               linenos=self.linenums,
                                               cssclass=self.css_class,
